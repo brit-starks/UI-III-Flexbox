@@ -68,48 +68,75 @@ h1, h2, h3, h4, h5 {
 * {
 	box-sizing: border-box;
 }
-
+/* setting a constraint on the container cinched all your code together and makes it look really good. Don't forget to set that constraint! When we get to responsive design this will make even more of a difference. The margin 0 auto is a css trick to get the application to center on the page.  */
 .container{
-	margin: 0 80px;
+	width: 1000px;
+	margin: 0 auto;
 }
-
+/* added a width on navitems to make it the same size as the container. Cinching... */
 .container .navitems {
+	width: 1000px;
 	margin-top: 25px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .container .navitems a{
 	color: gray;
 	text-decoration: none;
 }
+/* I try to go from less specificity to more specificity in my CSS code. Makes the code in general easy to read.  */
 
-.container .heading .innovate {
-	font-size: 6em;
-	margin-right: 300px;
-	padding: 50px;
-	width: 100px;
-	display: flex;
-	flex-direction: column;
-}
-
-.container .heading .innovate h3{
-	margin-top: 20px;
-	font-size: 25px;
-	padding: 10px;
-	padding-left: 40px;
-	height: 40px;
-	width: 200px;
-	border: 1px solid black;
-}
-
+/* Let's also set a width and a height on this heading so that we can control the flexing */
 .container .heading {
 	margin-top: 60px;
+	width: 1000px;
+	height: 400px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
+/* Definitely on the right track with display flex, flex-direction column. Let's set a width in relation to the overall div so that we can control the positioning on the page.  */
+.container .heading .innovate {
+	/* font-size: 6em; */
+	/* margin-right: 300px; */
+	/* padding: 50px; */
+	/* width: 100px; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 49%;
+}
+/* don't forget to give the h1 some love! it needs to be aligned to the center and the font-size needs to be changed. */
+.container .heading .innovate h1 {
+	font-size: 72px;
+	text-align: center;
+}
 
+/* You can rewrite the padding fo that the top/bottom is one number and the left/right is another number */
+/* I would also use display flex here to control the positioning of the button contents. */
+.container .heading .innovate h3{
+	margin-top: 20px;	
+	padding: 10px 40px;
+	/* padding: 10px; */
+	/* padding-left: 40px; */
+	height: 40px;
+	width: 200px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* .headingimage needs a width on it too */
+.container .heading .headingimage {
+	width: 49%;
+}
+
+
+
+/* I love your comments by the way. This is exactly right to do! The rest of this is just tweaking. You did pretty good overall Britt! Great Job! */
 /*-----------------Content Section----------------- */
 
 .container .content1 {
